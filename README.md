@@ -1,1 +1,1 @@
-# erfnet_ros
+# ROS Wrapper for ERFNet

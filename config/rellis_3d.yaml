@@ -1,0 +1,7 @@
+publish_rate: 100
+visualize: false
+
+rgb_input_topic:: "/nerian_stereo/right_image"
+num_of_class: 20
+load_dir: '/home/tiga/Documents/IRP/dev/erfnet_pytorch/save/erfnet_training_remote_v3/'
+weights_dir: 'model_best.pth'

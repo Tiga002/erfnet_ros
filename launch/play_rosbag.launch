@@ -1,0 +1,5 @@
+<launch>
+  <node name="image_proc" pkg="image_proc" type="image_proc" ns="/pylon_camera_node"/>
+  <node name="bag" pkg="rosbag" type="play"
+      args="-l $(find erfnet_ros)/bags/20200215_trail_1_synced.bag" />
+</launch>

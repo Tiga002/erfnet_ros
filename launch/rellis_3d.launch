@@ -1,0 +1,9 @@
+<launch>
+
+  <arg name="erfnet_ros_node_params" default="$(find erfnet_ros)/config/rellis_3d.yaml"/>
+  <node name="erfnet_ros_node" pkg="erfnet_ros" type="erfnet_ros_node.py" output="screen">
+    <rosparam file="$(arg erfnet_ros_node_params)" command="load" />
+  </node>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find erfnet_ros)/rviz/erfnet_ros.rviz" />
+</launch>

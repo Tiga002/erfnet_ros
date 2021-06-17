@@ -8,6 +8,7 @@ import torch
 
 from PIL import Image
 
+"""
 def colormap_cityscapes(n):
     cmap=np.zeros([n, 3]).astype(np.uint8)
     cmap[0,:] = np.array([128, 64,128])
@@ -33,9 +34,37 @@ def colormap_cityscapes(n):
     cmap[17,:] = np.array([  0,  0,230])
     cmap[18,:] = np.array([ 119, 11, 32])
     cmap[19,:] = np.array([ 0,  0,  0])
-    
-    return cmap
 
+    return cmap
+"""
+
+def colormap_rellis(n):
+    cmap=np.zeros([n, 3]).astype(np.uint8)
+    cmap[0,:] = np.array([0,153,153])
+    cmap[1,:] = np.array([0,102,0]) #108 64 20
+    cmap[2,:] = np.array([0,255,0]) # 102
+    cmap[3,:] = np.array([0,153,153]) # 255
+    cmap[4,:] = np.array([0,128,255])
+    cmap[5,:] = np.array([0,0,255] )
+
+    cmap[6,:] = np.array([255,255,0])
+    cmap[7,:] = np.array([255,0,127])
+    cmap[8,:] = np.array([64,64,64])
+    cmap[9,:] = np.array([255,0,0])
+    cmap[10,:] = np.array([102,0,0])
+
+    cmap[11,:] = np.array([204,153,255])
+    cmap[12,:] = np.array([102, 0, 204])
+    cmap[13,:] = np.array([255,153,204])
+    cmap[14,:] = np.array([170,170,170])
+    cmap[15,:] = np.array([41,121,255])
+
+    cmap[16,:] = np.array([134,255,239])
+    cmap[17,:] = np.array([99,66,34])
+    cmap[18,:] = np.array([110,22,138])
+    cmap[19,:] = np.array([0,153,153])
+
+    return cmap
 
 def colormap(n):
     cmap=np.zeros([n, 3]).astype(np.uint8)
@@ -74,7 +103,7 @@ class Colorize:
 
     def __init__(self, n=22):
         #self.cmap = colormap(256)
-        self.cmap = colormap_cityscapes(256)
+        self.cmap = colormap_rellis(256)
         self.cmap[n] = self.cmap[-1]
         self.cmap = torch.from_numpy(self.cmap[:n])
 

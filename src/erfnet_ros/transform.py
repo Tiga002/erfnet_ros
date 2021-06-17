@@ -40,29 +40,29 @@ def colormap_cityscapes(n):
 
 def colormap_rellis(n):
     cmap=np.zeros([n, 3]).astype(np.uint8)
-    cmap[0,:] = np.array([0,153,153])
-    cmap[1,:] = np.array([0,102,0]) #108 64 20
-    cmap[2,:] = np.array([0,255,0]) # 102
-    cmap[3,:] = np.array([0,153,153]) # 255
-    cmap[4,:] = np.array([0,128,255])
-    cmap[5,:] = np.array([0,0,255] )
+    cmap[0,:] = np.array([108, 64, 20])     # Dirt
+    cmap[1,:] = np.array([0,102,0])         # Grass
+    cmap[2,:] = np.array([0,255,0])         # Tree
+    cmap[3,:] = np.array([0,153,153])       # Pole
+    cmap[4,:] = np.array([0,128,255])       # Water
+    cmap[5,:] = np.array([0,0,255] )        # Sky
 
-    cmap[6,:] = np.array([255,255,0])
-    cmap[7,:] = np.array([255,0,127])
-    cmap[8,:] = np.array([64,64,64])
-    cmap[9,:] = np.array([255,0,0])
-    cmap[10,:] = np.array([102,0,0])
+    cmap[6,:] = np.array([255,255,0])       # Vehicle
+    cmap[7,:] = np.array([255,0,127])       # Object
+    cmap[8,:] = np.array([64,64,64])        # Asphalt
+    cmap[9,:] = np.array([255,0,0])         # Bulding
+    cmap[10,:] = np.array([102,0,0])        # Log
 
-    cmap[11,:] = np.array([204,153,255])
-    cmap[12,:] = np.array([102, 0, 204])
-    cmap[13,:] = np.array([255,153,204])
-    cmap[14,:] = np.array([170,170,170])
-    cmap[15,:] = np.array([41,121,255])
+    cmap[11,:] = np.array([204,153,255])    # Person
+    cmap[12,:] = np.array([102, 0, 204])    # Fence
+    cmap[13,:] = np.array([255,153,204])    # Bush
+    cmap[14,:] = np.array([170,170,170])    # Concrete
+    cmap[15,:] = np.array([41,121,255])     # Barrier
 
-    cmap[16,:] = np.array([134,255,239])
-    cmap[17,:] = np.array([99,66,34])
-    cmap[18,:] = np.array([110,22,138])
-    cmap[19,:] = np.array([0,153,153])
+    cmap[16,:] = np.array([134,255,239])    # Puddle
+    cmap[17,:] = np.array([99,66,34])       # Mud
+    cmap[18,:] = np.array([110,22,138])     # Rubble
+    cmap[19,:] = np.array([0,153,153])      # Dirt
 
     return cmap
 

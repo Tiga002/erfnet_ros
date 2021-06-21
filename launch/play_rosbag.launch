@@ -1,5 +1,13 @@
 <launch>
-  <node name="image_proc" pkg="image_proc" type="image_proc" ns="/pylon_camera_node"/>
+  <node name="image_proc" pkg="image_proc" type="image_proc" ns="/pylon_camera_node"/> 
   <node name="bag" pkg="rosbag" type="play"
-      args="-l $(find erfnet_ros)/bags/example_synced.bag" />
+      args="-l $(find erfnet_ros)/bags/example_full_stack_merged.bag" />
+
+<!--  <node name="stero_image_proc" pkg="stero_image_proc" type="stero_image_proc" ns="/stero_cam">
+    <remap from="/left/image_raw" to= "/nerian/left/image_raw" />
+    <remap from="/left/camera_info" to= "/nerian/left/camera_info" />
+    <remap from="/right/image_raw" to= "/nerian/right/image_raw" />
+    <remap from="/right/camera_info" to= "/nerian/right/camera_info" />
+  </node>-->
+
 </launch>

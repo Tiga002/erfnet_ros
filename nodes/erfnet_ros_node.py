@@ -109,6 +109,8 @@ class ERFNetNode(object):
                 P = P_arr.tolist()
                 new_camera_info_msg = camera_info_msg
                 new_camera_info_msg.P = P
+                new_camera_info_msg.height = 400
+                new_camera_info_msg.width = 640
                 self.camera_info_pub.publish(new_camera_info_msg)
 
             #if self._visualize:
